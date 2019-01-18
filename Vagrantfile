@@ -6,7 +6,9 @@ require 'yaml'
 #################################################################
 # Change settings in 'settings.yml' to match your environment
 #################################################################
-settings =      YAML.load_file 'settings.yml'
+
+settings = YAML.load_file 'settings.yml'
+
 
 # irixversion install 6.5.30, 6.5.22 or 5.3
 irixversion =   settings['booterizer']['irixversion']
@@ -34,15 +36,7 @@ clientether =   settings['booterizer']['clientether']
 #   In my case, it's the ethernet adapter, which is en0 
 bridgenic = settings['booterizer']['bridgenic']
 
-# FTP urls
 
-if irixversion == "6.5.30"
-  ftpurls = YAML.load_file 'irix.6.5.30.yml'
-elsif irixversion == "6.5.22"
-  ftpurls = YAML.load_file 'irix.6.5.22.yml'
-elsif irixversion == "5.3"
-  ftpurls = YAML.load_file 'irix.5.3.yml'
-end
 
 foundation =  ftpurls['ftpurls']['foundation']
 overlay =     ftpurls['ftpurls']['overlay']

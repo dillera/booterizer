@@ -1,12 +1,84 @@
 booterizer:
-  irixversion:    "5.3"
-  installmethod:  "ftp"
-  installmirror:  "dillernet.com"
-  clientname:     "riorey"
+  use_5_3:      true
+  use_6_22:     "true"
+  use_6_30:     "true"
   clientdomain:   "diller.org"
   network:        "192.168.251.0" 
   netmask:        "255.255.255.0"
   hostip:         "192.168.251.100"
+  bridgenic:      "en0"
+
+
+irix_5_3:
+  irixversion:    "5.3"
+  installmethod:  "ftp"
+  installmirror:  "dillernet.com"
+  clientname:     "riorey"
   clientip:       "192.168.251.31"
   clientether:    "00:22:3F:A9:AE:4D"
   bridgenic:      "en0"
+
+
+irix_6_22:
+  irixversion:    "6.5.22"
+  installmethod:  "ftp"
+  installmirror:  "dillernet.com"
+  clientname:     "oxygen5"
+  clientip:       "192.168.251.31"
+  clientether:    "00:22:3F:A9:AE:4D"
+  bridgenic:      "en0"
+
+irix_6_30:
+  irixversion:    "6.5.30"
+  installmethod:  "ftp"
+  installmirror:  "dillernet.com"
+  clientname:     "riorey"
+  clientip:       "192.168.251.31"
+  clientether:    "00:22:3F:A9:AE:4D"
+  bridgenic:      "en0"
+
+ftpurls_common:
+  foundation: 
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/foundation1.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/foundation2.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/onc3nfs.tar.gz
+  devel: 
+    - http://us.irisware.net/sgi-irix/development/developmentlibraries.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/devf_13.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/mipspro-7.4.3m.tar
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/mipspro744update.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/mipspro_c.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/mipspro_cee.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/mipspro_cpp.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/mipsproap.tar.gz
+    - http://us.irisware.net/sgi-irix/development/mipspro-74/prodev.tar.gz
+  extras: 
+    - http://us.irisware.net/sgi-irix/extras/perfcopilot.tar.gz
+    - http://us.irisware.net/sgi-irix/extras/sgipostscriptfonts.tar.gz
+  nekodeps: 
+    - nekodeps_custom.0.0.1.tardist
+  bootstrap: 
+    - ftp://nonfree.irix.fun/pub/misc/openssh_bundle-0.0.1.tardist.gz
+    - ftp://nonfree.irix.fun/pub/misc/python_bundle-0.0.1.tardist.gz
+    - ftp://nonfree.irix.fun/pub/misc/wget_bundle-0.0.1.tardist.gz
+
+ftpurls_5_3:
+  foundation: 
+    - http://dillernet.com/apple/downloads/irix_5_3_foundation.tgz
+  devel: 
+    - http://dillernet.com/apple/downloads/irix_5_3_development.tgz
+ 
+ ftpurls_6_22:
+  overlay: 
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/apps.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/disc1.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/disc2.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/disc3.tar.gz
+
+ftpurls_6_30:
+  overlay: 
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/apps.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/disc1.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/disc2.tar.gz
+    - http://us.irisware.net/sgi-irix/irix-6.5/network-installs/irix-6.5.22/disc3.tar.gz
+

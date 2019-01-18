@@ -18,7 +18,8 @@ ftpurls:
     - http://us.irisware.net/sgi-irix/development/mipspro-74/mipspro_cpp.tar.gz
     - http://us.irisware.net/sgi-irix/development/mipspro-74/mipsproap.tar.gz
     - http://us.irisware.net/sgi-irix/development/mipspro-74/prodev.tar.gz
-  extras: http://us.irisware.net/sgi-irix/extras/perfcopilot.tar.gz
+  extras: 
+    - http://us.irisware.net/sgi-irix/extras/perfcopilot.tar.gz
     - http://us.irisware.net/sgi-irix/extras/sgipostscriptfonts.tar.gz
   nekodeps: 
     - nekodeps_custom.0.0.1.tardist
